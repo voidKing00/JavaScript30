@@ -37,19 +37,51 @@
     ];
     
     // Array.prototype.filter()
+
     // 1. Filter the list of inventors for those who were born in the 1500's
+
+    // let bornBefore1500 = inventors.filter(element => element.year >= 1500 && element.year <= 1599);
+    // console.log(bornBefore1500);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
 
+    // let inventorsWithFullName = inventors.map(element => `${element.first} ${element.last}`);
+
+    // console.log(inventorsWithFullName);
+    
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+
+    // let inventorsByOldest = inventors.sort((currentElement, nextElement) => currentElement.year > nextElement.year ? -1 : 1);
+
+    // console.table(inventorsByOldest);
+
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
 
+    // const totalYears = inventors.reduce((total, inventor) => {
+    //   return total + (inventor.passed - inventor.year);
+    // }, 0);
+
+
+    // console.log(totalYears);
+
     // 5. Sort the inventors by years lived
 
+    // let inventorsByAge = inventors.sort((currentElement, nextElement) => {
+
+    //   let currentElementAge = currentElement.passed - currentElement.year;
+    //   let nextElementAge = nextElement.passed - nextElement.year;
+
+    //   return currentElementAge - nextElementAge;
+
+    // })
+
+    // console.table(inventorsByAge);
+   
+    // console.table(inventorsByAge);
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
@@ -57,10 +89,37 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+    // let alphabetical = people.sort((current, next) => {
+
+    //   const [currentLast, currentFirst] = current.split(", ");
+    //   const [nextLast, nextFirst] = next.split(", ");
+
+    //   return currentLast > nextLast ? 1 : -1;
+
+    // })
+
+    // console.log(alphabetical);
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    // let dataLog = data.reduce((accu, element) => {
+      
+    //   if(!accu[element]){
+          
+    //     accu[element] = 1;
+
+    //   }else{
+        
+    //     accu[element]++;
+    //   }
+
+    //   return accu;
+
+    // }, {}); 
+
+    // console.log(dataLog);
   </script>
 </body>
 </html>
